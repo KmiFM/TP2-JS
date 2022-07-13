@@ -2,14 +2,22 @@
 
 // Nota: usar confirm() https://www.w3schools.com/jsref/met_win_confirm.asp
 
+let texto = "";
 
+do {
+    
+    let cadena = prompt("Ingrese sus notas aqui");
+    
+    if (texto == "") {
+       
+        texto = texto + cadena;
+    }
+    
+    else {
+        
+        texto = texto + "-" + cadena;
+    }
+   
+} while (confirm("Desea seguir anotando?"));
 
-do{    
-let texto=prompt('Ingrese sus notas aqui:');
-console.log(texto);
-}while(confirm('Desea seguir agregando notas?'));{
-    document.write(texto + '-' + texto + '-' +texto);
-}
-
-
-
+document.write(texto);
