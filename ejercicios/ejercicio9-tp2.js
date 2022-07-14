@@ -14,22 +14,28 @@
 10
 */
 
-let numero = parseInt(prompt('Ingrese un numero'));
+  
+document.write("<hr>");
 
-if(Number(numero) == numero ){
-    if (numero >0 && numero <=500){
-        let rep, i;
-        for (i=1; i <= numero; i++){
-          for(repeticion=i;repeticion<=i;repeticion++){
-            document.write(repeticion);
-          }
-          document.write('<br>');
-        }
+var i;
+var j = 500;
+var rep = 0;
+
+for (i = 1; i <= j; i++) {
+    
+    document.write(i);
+    
+    if (i % 4 == 0) {
+        document.write(" (Multiplo de 4)");
     }
-    else{
-        alert('El valor introducido es mayor a 500, no es válida')
+    
+    if (i % 9 == 0) {
+        document.write(" (Multiplo de 9)");
     }
-}
-else{
-    alert('eso no es un numero xd');
+    
+    document.write("<br>");
+    
+    if (i % 5 == 0) {
+        document.write("<hr>");
+    }
 }
